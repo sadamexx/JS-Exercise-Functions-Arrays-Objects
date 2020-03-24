@@ -98,8 +98,12 @@ function temperatureInF(temp, unit) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(num, nombre, contact) {
+  return {
+    id: num,
+    name: nombre,
+    email: contact
+  }
 }
 
 /**
@@ -115,8 +119,8 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(obj) {
+  return "Hello, my name is " + `${obj.name}`
 }
 
 
@@ -135,8 +139,8 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(array) {
+  return array.indexOf('apple');
 }
 
 /**
@@ -154,8 +158,16 @@ function appleIndex(/* code here */) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(array) {
+  let array2 =[]
+  for(let i = 0; i < array.length; i++){
+    if(array[i] === 'apple'){
+      array2.push(true);
+    } else {
+       array2.push(false);
+    }    
+  } 
+  return array2;
 }
 
 
